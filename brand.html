@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brand guidelines — AMPL</title>
+    <meta
+      name="description"
+      content="AMPL digital brand guidelines: logo, color, type, voice, and the Base / Flash / Pulse lineup."
+    />
+    <link rel="icon" href="images/logomark-white.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css?v=mobile-forms" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="nav-logo" href="index.html" aria-label="AMPL home">
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="40" />
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <div class="nav-group nav-group-left">
+            <a class="nav-link" href="index.html#story">Story</a>
+            <a class="nav-link" href="product.html">Product</a>
+          </div>
+          <div class="nav-group nav-group-right">
+            <span class="nav-link is-disabled" aria-disabled="true" title="Coming soon">
+              <span class="tag-soon">Coming soon</span>
+              Community
+            </span>
+            <a class="nav-link" href="index.html#contact">Contact</a>
+            <a class="nav-cta" href="product.html">Visit Store</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero" aria-labelledby="brand-title">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="page-hero-inner">
+          <p class="eyebrow">Brand system</p>
+          <h1 id="brand-title" class="page-title">Stay Loud. Stay Healthy.</h1>
+          <p class="section-body">
+            A short digital guide pulled from the AMPL Figma file — logo, color, type, and the three modes.
+            Dark only. Mix it late. Keep the morning yours.
+          </p>
+          <nav class="brand-jump" aria-label="On this page">
+            <a href="#logo">Logo</a>
+            <a href="#color">Color</a>
+            <a href="#type">Type</a>
+            <a href="#voice">Voice</a>
+            <a href="#modes">Modes</a>
+            <a href="#ui">UI</a>
+          </nav>
+        </div>
+      </section>
+
+      <section id="logo" class="section story" aria-labelledby="logo-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Mark</p>
+            <h2 id="logo-title" class="section-title">Logo</h2>
+            <p class="section-body">
+              White lockup on black. Use the full wordmark in headers and the logomark when space is tight.
+            </p>
+          </div>
+          <div class="brand-lockups">
+            <figure class="brand-lockup">
+              <img src="images/logo-full-white.svg" alt="AMPL horizontal lockup" width="280" height="80" />
+            </figure>
+            <figure class="brand-lockup mark">
+              <img src="images/logomark-white.svg" alt="AMPL logomark" width="72" height="72" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="color" class="section story" aria-labelledby="color-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Palette</p>
+            <h2 id="color-title" class="section-title">Color</h2>
+            <p class="section-body">
+              Semantic tokens from the design system. Pulse, Flash, and Base carry the lineup. Everything else stays black and white.
+            </p>
+          </div>
+          <div class="brand-grid">
+            <figure class="swatch">
+              <div class="swatch-chip stroke" style="background: var(--bg)"></div>
+              <figcaption>
+                <strong>Black</strong>
+                <code>#000000 · --bg</code>
+              </figcaption>
+            </figure>
+            <figure class="swatch">
+              <div class="swatch-chip" style="background: var(--fg)"></div>
+              <figcaption>
+                <strong>White</strong>
+                <code>#FFFFFF · --fg</code>
+              </figcaption>
+            </figure>
+            <figure class="swatch">
+              <div class="swatch-chip" style="background: var(--bg-elevated)"></div>
+              <figcaption>
+                <strong>Elevated</strong>
+                <code>#0A0A0A · --bg-elevated</code>
+              </figcaption>
+            </figure>
+            <figure class="swatch">
+              <div class="swatch-chip" style="background: var(--pulse)"></div>
+              <figcaption>
+                <strong>Pulse</strong>
+                <code>#67BD47 · --pulse</code>
+              </figcaption>
+            </figure>
+            <figure class="swatch">
+              <div class="swatch-chip" style="background: var(--flash)"></div>
+              <figcaption>
+                <strong>Flash</strong>
+                <code>#FFF33B · --flash</code>
+              </figcaption>
+            </figure>
+            <figure class="swatch">
+              <div class="swatch-chip" style="background: var(--base)"></div>
+              <figcaption>
+                <strong>Base</strong>
+                <code>#DD8326 · --base</code>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="type" class="section story" aria-labelledby="type-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Typography</p>
+            <h2 id="type-title" class="section-title">Type</h2>
+            <p class="section-body">
+              Display is Moon Walk. Body and UI are Inter. In Figma, Extra Bold Inter stands in when Moon Walk is missing.
+            </p>
+          </div>
+          <div class="type-specimen">
+            <p class="display">AMPL</p>
+            <p class="type-meta">Moon Walk · Display / Hero</p>
+            <p class="body">
+              Stay Loud. Stay Healthy. Mix it late. Keep the morning yours. Functional support for nights that go loud — without dimming the morning.
+            </p>
+            <p class="type-meta">Inter Regular · Body / Default · 18</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="voice" class="section story" aria-labelledby="voice-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Copy</p>
+            <h2 id="voice-title" class="section-title">Voice</h2>
+            <p class="section-body">Short. Direct. Night-out energy with a clean recovery. No wellness lecture.</p>
+          </div>
+          <div class="brand-grid two">
+            <article class="brand-card">
+              <p class="eyebrow">Line</p>
+              <h3>Stay Loud. Stay Healthy.</h3>
+              <p>Primary lockup line. Use it as a close, a cover, or a header — not as body copy.</p>
+            </article>
+            <article class="brand-card">
+              <p class="eyebrow">Promise</p>
+              <h3>Protect the morning.</h3>
+              <p>Enjoy the moment, protect your morning. Mix one sachet into 650–700 ml when the night winds down.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="modes" class="section story" aria-labelledby="modes-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Lineup</p>
+            <h2 id="modes-title" class="section-title">Three modes. One ritual.</h2>
+            <p class="section-body">Flavor color is the only place the palette gets loud. Don’t mix Pulse green into Base art, or Flash yellow into Pulse.</p>
+          </div>
+          <div class="brand-grid">
+            <article class="brand-card">
+              <p class="product-flavor" style="color: var(--base)">Tuned for Recovery</p>
+              <h3>Base</h3>
+              <p>Everyday support when you want balance, not a reset button.</p>
+            </article>
+            <article class="brand-card">
+              <p class="product-flavor" style="color: var(--flash)">Primed for Power</p>
+              <h3>Flash</h3>
+              <p>Fast clarity for nights that push past the usual finish line.</p>
+            </article>
+            <article class="brand-card">
+              <p class="product-flavor" style="color: var(--pulse)">Charged for Endurance</p>
+              <h3>Pulse</h3>
+              <p>Steady recovery for long nights and louder rooms.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="ui" class="section story" aria-labelledby="ui-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Components</p>
+            <h2 id="ui-title" class="section-title">UI</h2>
+            <p class="section-body">
+              Same atoms as the Figma library: primary pill, ghost outline, coming-soon tag, Pulse eyebrow.
+            </p>
+          </div>
+          <div class="brand-ui-row">
+            <a class="btn btn-primary" href="product.html">Shop the mix</a>
+            <a class="btn btn-ghost" href="product.html">View details</a>
+            <span class="tag-soon">Coming soon</span>
+          </div>
+          <p class="eyebrow" style="margin-top: 1.5rem">The idea</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="index.html" aria-label="AMPL home">
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="45" />
+        </a>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="product.html">Product</a>
+          <a href="index.html#story">Story</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="brand.html">Brand</a>
+          <a href="sitemap.html">Sitemap</a>
+          <a href="legal.html#privacy">Privacy</a>
+          <a href="legal.html#terms">Terms</a>
+        </nav>
+        <nav class="footer-social" aria-label="Social">
+          <a href="https://linktr.ee/stayampl" target="_blank" rel="noopener noreferrer">Linktree</a>
+          <a href="https://www.instagram.com/stayampl" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@stayampl" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </nav>
+        <p class="footer-copy">&copy; <span data-year></span> AMPL. Stay Loud. Stay Healthy.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js?v=mobile-forms" defer></script>
+  </body>
+</html>

@@ -9,7 +9,7 @@
       content="AMPL sachets in Base, Flash, and Pulse. Stay Loud. Stay Healthy. Enjoy the Moment, Protect Your Morning."
     />
     <link rel="icon" href="images/logomark-white.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=mobile-forms" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -17,7 +17,7 @@
     <header class="site-header">
       <div class="nav-shell">
         <a class="nav-logo" href="index.html" aria-label="AMPL home">
-          <img src="images/logo-full-white.svg" alt="AMPL" width="140" height="40" />
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="40" />
         </a>
 
         <button
@@ -32,14 +32,18 @@
         </button>
 
         <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link is-active" href="product.html">Product</a>
-          <a class="nav-link" href="index.html#story">Story</a>
-          <span class="nav-link is-disabled" aria-disabled="true" title="Coming soon">
-            Community
-            <span class="tag-soon">Coming soon</span>
-          </span>
-          <a class="nav-cta" href="#variants">View lineup</a>
+          <div class="nav-group nav-group-left">
+            <a class="nav-link" href="index.html#story">Story</a>
+            <a class="nav-link is-active" href="product.html">Product</a>
+          </div>
+          <div class="nav-group nav-group-right">
+            <span class="nav-link is-disabled" aria-disabled="true" title="Coming soon">
+              <span class="tag-soon">Coming soon</span>
+              Community
+            </span>
+            <a class="nav-link" href="index.html#contact">Contact</a>
+            <a class="nav-cta" href="#variants">Visit Store</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -62,16 +66,17 @@
           <div class="section-head">
             <p class="eyebrow">Variants</p>
             <h2 id="variants-title" class="section-title">Choose your mode</h2>
+            <p class="section-body">Each mode can come in different flavors. Pick the phase that matches the night.</p>
           </div>
 
           <article id="pulse" class="variant-row">
             <div class="variant-media">
-              <img src="images/sachet-pulse.png" alt="AMPL Pulse Mint Wave sachet" width="360" height="480" />
+              <img src="images/sachet-pulse.png" alt="AMPL Pulse sachet" width="360" height="480" />
             </div>
             <div class="variant-copy">
               <p class="variant-label">01</p>
               <h3>Pulse</h3>
-              <p class="variant-flavor">Mint Wave · Charged for Endurance</p>
+              <p class="variant-flavor">Charged for Endurance</p>
               <p>
                 Designed for longer stretches — festivals, afterparties, nights that keep finding
                 another gear.
@@ -86,12 +91,12 @@
 
           <article id="flash" class="variant-row reverse">
             <div class="variant-media">
-              <img src="images/sachet-flash.png" alt="AMPL Flash Neon Citrus sachet" width="360" height="480" />
+              <img src="images/sachet-flash.png" alt="AMPL Flash sachet" width="360" height="480" />
             </div>
             <div class="variant-copy">
               <p class="variant-label">02</p>
               <h3>Flash</h3>
-              <p class="variant-flavor">Neon Citrus · Primed for Power</p>
+              <p class="variant-flavor">Primed for Power</p>
               <p>
                 For nights that move fast. Flash is the sharper option when you need clarity sooner
                 after the peak.
@@ -106,12 +111,12 @@
 
           <article id="base" class="variant-row">
             <div class="variant-media">
-              <img src="images/sachet-base.png" alt="AMPL Base Amber Tangerine sachet" width="360" height="480" />
+              <img src="images/sachet-base.png" alt="AMPL Base sachet" width="360" height="480" />
             </div>
             <div class="variant-copy">
               <p class="variant-label">03</p>
               <h3>Base</h3>
-              <p class="variant-flavor">Amber Tangerine · Tuned for Recovery</p>
+              <p class="variant-flavor">Tuned for Recovery</p>
               <p>
                 Your everyday AMPL. Balanced support when the night is social but you still want
                 a clean land.
@@ -180,13 +185,16 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="footer-logo" href="index.html" aria-label="AMPL home">
-          <img src="images/logo-full-white.svg" alt="AMPL" width="120" height="34" />
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="45" />
         </a>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="index.html">Home</a>
           <a href="product.html">Product</a>
           <a href="index.html#story">Story</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="brand.html">Brand</a>
           <a href="sitemap.html">Sitemap</a>
+          <a href="legal.html#privacy">Privacy</a>
+          <a href="legal.html#terms">Terms</a>
         </nav>
         <nav class="footer-social" aria-label="Social">
           <a href="https://linktr.ee/stayampl" target="_blank" rel="noopener noreferrer">Linktree</a>
@@ -197,6 +205,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=mobile-forms" defer></script>
   </body>
 </html>

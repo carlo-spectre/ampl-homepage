@@ -6,7 +6,7 @@
     <title>Sitemap — AMPL</title>
     <meta name="description" content="Sitemap for AMPL — Stay Loud. Stay Healthy." />
     <link rel="icon" href="images/logomark-white.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=mobile-forms" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -14,7 +14,7 @@
     <header class="site-header">
       <div class="nav-shell">
         <a class="nav-logo" href="index.html" aria-label="AMPL home">
-          <img src="images/logo-full-white.svg" alt="AMPL" width="140" height="40" />
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="40" />
         </a>
 
         <button
@@ -29,14 +29,18 @@
         </button>
 
         <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link" href="product.html">Product</a>
-          <a class="nav-link" href="index.html#story">Story</a>
-          <span class="nav-link is-disabled" aria-disabled="true" title="Coming soon">
-            Community
-            <span class="tag-soon">Coming soon</span>
-          </span>
-          <a class="nav-cta" href="product.html">Explore AMPL</a>
+          <div class="nav-group nav-group-left">
+            <a class="nav-link" href="index.html#story">Story</a>
+            <a class="nav-link" href="product.html">Product</a>
+          </div>
+          <div class="nav-group nav-group-right">
+            <span class="nav-link is-disabled" aria-disabled="true" title="Coming soon">
+              <span class="tag-soon">Coming soon</span>
+              Community
+            </span>
+            <a class="nav-link" href="index.html#contact">Contact</a>
+            <a class="nav-cta" href="product.html">Visit Store</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -61,7 +65,19 @@
               <a href="index.html#story"><span>Story</span><span>index.html#story</span></a>
             </li>
             <li>
+              <a href="index.html#contact"><span>Contact</span><span>index.html#contact</span></a>
+            </li>
+            <li>
               <a href="product.html"><span>Product</span><span>product.html</span></a>
+            </li>
+            <li>
+              <a href="brand.html"><span>Brand guidelines</span><span>brand.html</span></a>
+            </li>
+            <li>
+              <a href="legal.html#privacy"><span>Privacy</span><span>legal.html#privacy</span></a>
+            </li>
+            <li>
+              <a href="legal.html#terms"><span>Terms</span><span>legal.html#terms</span></a>
             </li>
             <li>
               <a href="product.html#pulse"><span>Pulse</span><span>product.html#pulse</span></a>
@@ -89,13 +105,16 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="footer-logo" href="index.html" aria-label="AMPL home">
-          <img src="images/logo-full-white.svg" alt="AMPL" width="120" height="34" />
+          <img src="images/logomark-white.svg" alt="AMPL" width="40" height="45" />
         </a>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="index.html">Home</a>
           <a href="product.html">Product</a>
           <a href="index.html#story">Story</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="brand.html">Brand</a>
           <a href="sitemap.html">Sitemap</a>
+          <a href="legal.html#privacy">Privacy</a>
+          <a href="legal.html#terms">Terms</a>
         </nav>
         <nav class="footer-social" aria-label="Social">
           <a href="https://linktr.ee/stayampl" target="_blank" rel="noopener noreferrer">Linktree</a>
@@ -106,6 +125,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js" defer></script>
+    <script src="js/main.js?v=mobile-forms" defer></script>
   </body>
 </html>
