@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Brand guidelines — AMPL</title>
+    <title>Brand Guide — AMPL</title>
     <meta
       name="description"
-      content="AMPL digital brand guidelines: logo, color, type, voice, and the Base / Flash / Pulse lineup."
+      content="AMPL brand guide: download logos, color tokens, type rules, and clear do's and don'ts."
     />
     <link rel="icon" href="images/logomark-white.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="css/style.css?v=mobile-forms" />
+    <link rel="stylesheet" href="css/style.css?v=brand-hero-center" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -49,22 +49,26 @@
     </header>
 
     <main id="main">
-      <section class="page-hero" aria-labelledby="brand-title">
+      <section class="page-hero page-hero--compact" aria-labelledby="brand-title">
         <div class="hero-bg" aria-hidden="true"></div>
         <div class="page-hero-inner">
-          <p class="eyebrow">Brand system</p>
-          <h1 id="brand-title" class="page-title">Stay Loud. Stay Healthy.</h1>
+          <p class="eyebrow">Brand guide</p>
+          <h1 id="brand-title" class="page-title">Brand assets &amp; usage</h1>
           <p class="section-body">
-            A short digital guide pulled from the AMPL Figma file — logo, color, type, and the three modes.
-            Dark only. Mix it late. Keep the morning yours.
+            Logos, color, type, and clear do’s and don’ts for partners and press.
           </p>
+          <div class="hero-actions brand-hero-actions">
+            <a class="btn btn-primary" href="downloads/ampl-brand-kit.zip" download>Download brand kit</a>
+            <a class="btn btn-ghost" href="#assets">Browse assets</a>
+          </div>
           <nav class="brand-jump" aria-label="On this page">
             <a href="#logo">Logo</a>
+            <a href="#usage">Do’s &amp; don’ts</a>
             <a href="#color">Color</a>
             <a href="#type">Type</a>
             <a href="#voice">Voice</a>
             <a href="#modes">Modes</a>
-            <a href="#ui">UI</a>
+            <a href="#assets">Assets</a>
           </nav>
         </div>
       </section>
@@ -75,16 +79,105 @@
             <p class="eyebrow">Mark</p>
             <h2 id="logo-title" class="section-title">Logo</h2>
             <p class="section-body">
-              White lockup on black. Use the full wordmark in headers and the logomark when space is tight.
+              Two lockups: the full wordmark for headers and the logomark when space is tight.
+              Prefer white on black. Use the black versions only on light backgrounds.
             </p>
           </div>
           <div class="brand-lockups">
             <figure class="brand-lockup">
-              <img src="images/logo-full-white.svg" alt="AMPL horizontal lockup" width="280" height="80" />
+              <img src="images/logo-full-white.svg" alt="AMPL horizontal lockup on black" width="280" height="80" />
+              <figcaption>Wordmark · White</figcaption>
             </figure>
             <figure class="brand-lockup mark">
-              <img src="images/logomark-white.svg" alt="AMPL logomark" width="72" height="72" />
+              <img src="images/logomark-white.svg" alt="AMPL logomark on black" width="72" height="72" />
+              <figcaption>Logomark · White</figcaption>
             </figure>
+            <figure class="brand-lockup is-light">
+              <img src="images/brand/logo-full-black.svg" alt="AMPL horizontal lockup on light" width="280" height="80" />
+              <figcaption>Wordmark · Black</figcaption>
+            </figure>
+            <figure class="brand-lockup mark is-light">
+              <img src="images/brand/logomark-black.svg" alt="AMPL logomark on light" width="72" height="72" />
+              <figcaption>Logomark · Black</figcaption>
+            </figure>
+          </div>
+          <div class="brand-clearspace">
+            <div class="brand-clearspace-visual" aria-hidden="true">
+              <span class="brand-clearspace-box">
+                <img src="images/logomark-white.svg" alt="" width="56" height="56" />
+              </span>
+            </div>
+            <div>
+              <h3 class="brand-subhead">Clear space</h3>
+              <p class="section-body">
+                Keep clear space around the mark equal to at least half the logomark height on every side.
+                Don’t crowd it with type, photos, or other logos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="usage" class="section story" aria-labelledby="usage-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <p class="eyebrow">Usage</p>
+            <h2 id="usage-title" class="section-title">Do’s &amp; don’ts</h2>
+            <p class="section-body">
+              The mark is a signal, not decoration. If it starts to look like a sticker pack, dial it back.
+            </p>
+          </div>
+          <div class="usage-grid">
+            <article class="usage-card is-do">
+              <p class="usage-label">Do</p>
+              <div class="usage-preview">
+                <img src="images/logo-full-white.svg" alt="" width="200" height="58" />
+              </div>
+              <h3>Use the official files</h3>
+              <p>Download the SVG kit. Don’t redraw, trace, or rebuild the letterforms.</p>
+            </article>
+            <article class="usage-card is-dont">
+              <p class="usage-label">Don’t</p>
+              <div class="usage-preview">
+                <img class="usage-bad stretch" src="images/logo-full-white.svg" alt="" width="200" height="58" />
+              </div>
+              <h3>Stretch or squash</h3>
+              <p>Scale proportionally. Distorted marks look cheap and break the wordmark.</p>
+            </article>
+            <article class="usage-card is-do">
+              <p class="usage-label">Do</p>
+              <div class="usage-preview">
+                <img src="images/logomark-white.svg" alt="" width="64" height="64" />
+              </div>
+              <h3>Keep contrast high</h3>
+              <p>White on black, or black on light. The mark should read instantly at a glance.</p>
+            </article>
+            <article class="usage-card is-dont">
+              <p class="usage-label">Don’t</p>
+              <div class="usage-preview">
+                <img class="usage-bad recolor" src="images/logomark-white.svg" alt="" width="64" height="64" />
+              </div>
+              <h3>Recolor the mark</h3>
+              <p>Don’t tint it Pulse green, Flash yellow, or Base orange. Color belongs to the product lineup.</p>
+            </article>
+            <article class="usage-card is-do">
+              <p class="usage-label">Do</p>
+              <div class="usage-preview usage-preview-pair">
+                <img src="images/logo-full-white.svg" alt="" width="140" height="40" />
+                <span class="usage-divider" aria-hidden="true"></span>
+                <img src="images/logomark-white.svg" alt="" width="40" height="40" />
+              </div>
+              <h3>Pick one lockup</h3>
+              <p>Use the wordmark or the logomark — not both stacked in the same corner.</p>
+            </article>
+            <article class="usage-card is-dont">
+              <p class="usage-label">Don’t</p>
+              <div class="usage-preview">
+                <img class="usage-bad rotate" src="images/logomark-white.svg" alt="" width="64" height="64" />
+              </div>
+              <h3>Rotate, outline, or drop shadow</h3>
+              <p>No glow, bevel, stroke, or 3D. Flat mark, clear background, done.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -95,7 +188,8 @@
             <p class="eyebrow">Palette</p>
             <h2 id="color-title" class="section-title">Color</h2>
             <p class="section-body">
-              Semantic tokens from the design system. Pulse, Flash, and Base carry the lineup. Everything else stays black and white.
+              Black and white carry the brand. Pulse, Flash, and Base only appear with their product.
+              Don’t use product colors as general accent chrome.
             </p>
           </div>
           <div class="brand-grid">
@@ -151,7 +245,8 @@
             <p class="eyebrow">Typography</p>
             <h2 id="type-title" class="section-title">Type</h2>
             <p class="section-body">
-              Display is Moon Walk. Body and UI are Inter. In Figma, Extra Bold Inter stands in when Moon Walk is missing.
+              Display is Moon Walk (renders all-caps). Body and UI are Inter.
+              Headlines stay short. Body stays readable.
             </p>
           </div>
           <div class="type-specimen">
@@ -160,7 +255,25 @@
             <p class="body">
               Stay Loud. Stay Healthy. Mix it late. Keep the morning yours. Functional support for nights that go loud — without dimming the morning.
             </p>
-            <p class="type-meta">Inter Regular · Body / Default · 18</p>
+            <p class="type-meta">Inter Regular · Body / Default</p>
+          </div>
+          <div class="usage-split">
+            <article class="usage-list is-do">
+              <h3 class="brand-subhead">Do</h3>
+              <ul>
+                <li>Use Moon Walk for brand lines and section titles</li>
+                <li>Keep display lines to a few words</li>
+                <li>Set body in Inter at comfortable reading sizes</li>
+              </ul>
+            </article>
+            <article class="usage-list is-dont">
+              <h3 class="brand-subhead">Don’t</h3>
+              <ul>
+                <li>Pair random display fonts with the AMPL mark</li>
+                <li>Set long paragraphs in Moon Walk</li>
+                <li>Force title case — Moon Walk already reads as caps</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -184,6 +297,24 @@
               <p>Enjoy the moment, protect your morning. Mix one sachet into 650–700 ml when the night winds down.</p>
             </article>
           </div>
+          <div class="usage-split">
+            <article class="usage-list is-do">
+              <h3 class="brand-subhead">Do</h3>
+              <ul>
+                <li>Sound confident and brief</li>
+                <li>Talk about nights and mornings in the same breath</li>
+                <li>Lead with the ritual, not ingredient jargon</li>
+              </ul>
+            </article>
+            <article class="usage-list is-dont">
+              <h3 class="brand-subhead">Don’t</h3>
+              <ul>
+                <li>Promise medical outcomes or hangover cures</li>
+                <li>Sound like a spa brochure or a gym bro rant</li>
+                <li>Overexplain — if it needs a footnote, cut it</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -192,43 +323,91 @@
           <div class="section-head">
             <p class="eyebrow">Lineup</p>
             <h2 id="modes-title" class="section-title">Three modes. One ritual.</h2>
-            <p class="section-body">Flavor color is the only place the palette gets loud. Don’t mix Pulse green into Base art, or Flash yellow into Pulse.</p>
+            <p class="section-body">
+              Flavor color is the only place the palette gets loud. Don’t mix Pulse green into Base art, or Flash yellow into Pulse.
+            </p>
           </div>
           <div class="brand-grid">
             <article class="brand-card">
-              <p class="product-flavor" style="color: var(--base)">Tuned for Recovery</p>
-              <h3>Base</h3>
-              <p>Everyday support when you want balance, not a reset button.</p>
+              <p class="product-flavor" style="color: var(--pulse)">Charged for Endurance</p>
+              <h3>Pulse</h3>
+              <p>Steady recovery for long nights and louder rooms. Green stays with Pulse.</p>
             </article>
             <article class="brand-card">
               <p class="product-flavor" style="color: var(--flash)">Primed for Power</p>
               <h3>Flash</h3>
-              <p>Fast clarity for nights that push past the usual finish line.</p>
+              <p>Fast clarity for nights that push past the usual finish line. Yellow stays with Flash.</p>
             </article>
             <article class="brand-card">
-              <p class="product-flavor" style="color: var(--pulse)">Charged for Endurance</p>
-              <h3>Pulse</h3>
-              <p>Steady recovery for long nights and louder rooms.</p>
+              <p class="product-flavor" style="color: var(--base)">Tuned for Recovery</p>
+              <h3>Base</h3>
+              <p>Everyday support when you want balance, not a reset button. Orange stays with Base.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="ui" class="section story" aria-labelledby="ui-title">
+      <section id="assets" class="section story" aria-labelledby="assets-title">
         <div class="section-inner">
           <div class="section-head">
-            <p class="eyebrow">Components</p>
-            <h2 id="ui-title" class="section-title">UI</h2>
+            <p class="eyebrow">Downloads</p>
+            <h2 id="assets-title" class="section-title">Brand assets</h2>
             <p class="section-body">
-              Same atoms as the Figma library: primary pill, ghost outline, coming-soon tag, Pulse eyebrow.
+              SVG files for digital use. Grab the full kit, or pull a single lockup.
+              For press or partnership asks: <a href="mailto:roy@stayampl.com">roy@stayampl.com</a>.
             </p>
           </div>
-          <div class="brand-ui-row">
-            <a class="btn btn-primary" href="product.html">Shop the mix</a>
-            <a class="btn btn-ghost" href="product.html">View details</a>
-            <span class="tag-soon">Coming soon</span>
+          <div class="asset-kit">
+            <div>
+              <h3 class="brand-subhead">Full kit</h3>
+              <p class="section-body">
+                White and black wordmarks plus logomarks in one ZIP.
+              </p>
+            </div>
+            <a class="btn btn-primary" href="downloads/ampl-brand-kit.zip" download>Download ZIP</a>
           </div>
-          <p class="eyebrow" style="margin-top: 1.5rem">The idea</p>
+          <ul class="asset-grid">
+            <li class="asset-card">
+              <div class="asset-preview">
+                <img src="images/brand/logo-full-white.svg" alt="" width="200" height="58" />
+              </div>
+              <div class="asset-meta">
+                <strong>Wordmark · White</strong>
+                <span>SVG · Dark backgrounds</span>
+              </div>
+              <a class="btn btn-ghost asset-dl" href="images/brand/logo-full-white.svg" download>Download</a>
+            </li>
+            <li class="asset-card">
+              <div class="asset-preview is-light">
+                <img src="images/brand/logo-full-black.svg" alt="" width="200" height="58" />
+              </div>
+              <div class="asset-meta">
+                <strong>Wordmark · Black</strong>
+                <span>SVG · Light backgrounds</span>
+              </div>
+              <a class="btn btn-ghost asset-dl" href="images/brand/logo-full-black.svg" download>Download</a>
+            </li>
+            <li class="asset-card">
+              <div class="asset-preview">
+                <img src="images/brand/logomark-white.svg" alt="" width="56" height="56" />
+              </div>
+              <div class="asset-meta">
+                <strong>Logomark · White</strong>
+                <span>SVG · Dark backgrounds</span>
+              </div>
+              <a class="btn btn-ghost asset-dl" href="images/brand/logomark-white.svg" download>Download</a>
+            </li>
+            <li class="asset-card">
+              <div class="asset-preview is-light">
+                <img src="images/brand/logomark-black.svg" alt="" width="56" height="56" />
+              </div>
+              <div class="asset-meta">
+                <strong>Logomark · Black</strong>
+                <span>SVG · Light backgrounds</span>
+              </div>
+              <a class="btn btn-ghost asset-dl" href="images/brand/logomark-black.svg" download>Download</a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
@@ -242,7 +421,6 @@
           <a href="product.html">Product</a>
           <a href="index.html#story">Story</a>
           <a href="index.html#contact">Contact</a>
-          <a href="brand.html">Brand</a>
           <a href="sitemap.html">Sitemap</a>
           <a href="legal.html#privacy">Privacy</a>
           <a href="legal.html#terms">Terms</a>
@@ -256,6 +434,6 @@
       </div>
     </footer>
 
-    <script src="js/main.js?v=mobile-forms" defer></script>
+    <script src="js/main.js?v=brand-guide" defer></script>
   </body>
 </html>

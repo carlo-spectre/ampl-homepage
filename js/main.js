@@ -137,13 +137,6 @@
     const status = newsletter.querySelector(".form-status");
     const field = newsletter.querySelector("#newsletter-email");
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const fullPlaceholder = field.placeholder;
-    const narrow = window.matchMedia("(max-width: 760px)");
-    const setPlaceholder = () => {
-      field.placeholder = narrow.matches ? "Enter your email" : fullPlaceholder;
-    };
-    setPlaceholder();
-    narrow.addEventListener("change", setPlaceholder);
 
     newsletter.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -158,6 +151,25 @@
       newsletter.reset();
       status.className = "form-status is-success";
       status.textContent = "You’re on the list.";
+    });
+  }
+
+  const protocolCards = document.querySelectorAll(".protocol-card");
+  if (protocolCards.length) {
+    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    protocolCards.forEach((card) => {
+      const hint = card.querySelector(".protocol-flip-hint");
+      if (hint) hint.textContent = canHover ? "Hover for details" : "Tap for details";
+
+      if (canHover) return;
+
+      card.addEventListener("click", (event) => {
+        if (event.target.closest(".protocol-face-cta")) return;
+        event.preventDefault();
+        const wasFlipped = card.classList.contains("is-flipped");
+        protocolCards.forEach((other) => other.classList.remove("is-flipped"));
+        if (!wasFlipped) card.classList.add("is-flipped");
+      });
     });
   }
 })();
