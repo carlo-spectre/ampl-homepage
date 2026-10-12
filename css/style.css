@@ -2788,16 +2788,6 @@ a.brand-card {
     font-size: 0.78rem;
   }
 
-  .protocol-flavors {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0.55rem;
-  }
-
-  .protocol-flavors li {
-    font-size: 0.82rem;
-    padding: 0.55rem 0.7rem 0.55rem 0.45rem;
-  }
-
   .product-tile img {
     max-height: 16rem;
   }
@@ -2806,6 +2796,23 @@ a.brand-card {
 @media (max-width: 760px) {
   .how-steps {
     grid-template-columns: 1fr;
+  }
+
+  .protocol-flavors {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
+
+  .protocol-flavors li,
+  .protocol-flavors li:nth-child(4),
+  .protocol-flavors li:nth-child(5) {
+    grid-column: auto;
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    padding: 0.55rem 0.65rem 0.55rem 0.4rem;
+    border-radius: 1rem;
   }
 
   .footer-nav,
