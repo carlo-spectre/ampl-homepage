@@ -697,7 +697,7 @@ body.nav-open .site-header {
 }
 
 .product-hero .page-hero-inner {
-  max-width: min(56rem, 100%);
+  max-width: min(68rem, 100%);
 }
 
 .page-title {
@@ -707,8 +707,13 @@ body.nav-open .site-header {
 
 .product-hero .page-title {
   max-width: none;
-  text-wrap: balance;
+  text-wrap: wrap;
   white-space: normal;
+}
+
+.product-hero .product-hero-lede {
+  max-width: none;
+  text-wrap: wrap;
 }
 
 .section {
@@ -1525,19 +1530,19 @@ body.nav-open .site-header {
 }
 
 .cta-inner {
-  max-width: min(52rem, 100%);
+  max-width: min(60rem, 100%);
   text-align: center;
 }
 
 .cta .section-title {
-  text-wrap: balance;
+  text-wrap: wrap;
   max-width: none;
 }
 
 .cta .section-body {
-  max-width: 40rem;
+  max-width: min(48rem, 100%);
   margin-inline: auto;
-  text-wrap: pretty;
+  text-wrap: wrap;
 }
 
 .cta .hero-actions {
@@ -1965,10 +1970,15 @@ a.brand-card {
 }
 
 .variants .section-head {
-  max-width: 42rem;
+  max-width: min(56rem, 100%);
   margin-inline: auto;
   margin-bottom: 2.75rem;
   text-align: center;
+}
+
+.variants .section-head .section-body {
+  max-width: none;
+  text-wrap: wrap;
 }
 
 .variant-row {
