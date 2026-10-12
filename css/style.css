@@ -1526,14 +1526,41 @@ body.nav-open .site-header {
 }
 
 .cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   text-align: center;
   border-top: 1px solid var(--line);
   margin-top: 1.5rem;
   padding-top: 7rem;
   padding-bottom: 6rem;
+  background: #050505;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: url("../images/bg-cta-crowd.jpg");
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 45%, rgba(0, 0, 0, 0.35), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0.72) 55%, rgba(0, 0, 0, 0.82) 100%);
 }
 
 .cta-inner {
+  position: relative;
+  z-index: 1;
   max-width: min(60rem, 100%);
   text-align: center;
 }
