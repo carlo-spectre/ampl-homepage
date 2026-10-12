@@ -156,19 +156,33 @@
 
   const protocolCards = document.querySelectorAll(".protocol-card");
   if (protocolCards.length) {
-    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     protocolCards.forEach((card) => {
-      const hint = card.querySelector(".protocol-flip-hint");
-      if (hint) hint.textContent = canHover ? "Hover for details" : "Tap for details";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("aria-expanded", "false");
 
-      if (canHover) return;
+      const flipCard = () => {
+        const wasFlipped = card.classList.contains("is-flipped");
+        protocolCards.forEach((other) => {
+          other.classList.remove("is-flipped");
+          other.setAttribute("aria-expanded", "false");
+        });
+        if (!wasFlipped) {
+          card.classList.add("is-flipped");
+          card.setAttribute("aria-expanded", "true");
+        }
+      };
 
       card.addEventListener("click", (event) => {
         if (event.target.closest(".protocol-face-cta")) return;
+        flipCard();
+      });
+
+      card.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        if (event.target.closest(".protocol-face-cta")) return;
         event.preventDefault();
-        const wasFlipped = card.classList.contains("is-flipped");
-        protocolCards.forEach((other) => other.classList.remove("is-flipped"));
-        if (!wasFlipped) card.classList.add("is-flipped");
+        flipCard();
       });
     });
   }
