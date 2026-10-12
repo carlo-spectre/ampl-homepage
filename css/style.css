@@ -1101,10 +1101,13 @@ body.nav-open .site-header {
 }
 
 .protocol-face-front {
-  position: relative;
-  overflow: visible;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
   padding-top: 1.35rem;
   cursor: pointer;
+  transform: rotateY(0deg);
+  z-index: 2;
 }
 
 .protocol-face-back {
@@ -1114,6 +1117,7 @@ body.nav-open .site-header {
   justify-content: space-between;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
   background:
     radial-gradient(ellipse 90% 55% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
     #0a0a0a;
@@ -1161,6 +1165,8 @@ body.nav-open .site-header {
   animation: protocol-pack-float 4.8s ease-in-out infinite;
   will-change: transform;
   pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .protocol-card.is-pulse .protocol-face-front img {
@@ -1245,9 +1251,33 @@ body.nav-open .site-header {
   transform: rotateY(180deg);
 }
 
+/* Mobile Safari often fails backface-visibility on animated images —
+   force-hide the front (and pack art) once the card is flipped. */
+.protocol-card.is-flipped .protocol-face-front {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.protocol-card.is-flipped .protocol-face-back {
+  z-index: 2;
+}
+
+.protocol-card.is-flipped .protocol-face-front img {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .protocol-flip {
     transform: none !important;
+  }
+
+  .protocol-face-front {
+    position: relative;
+    inset: auto;
   }
 
   .protocol-face-front img {
@@ -1260,6 +1290,13 @@ body.nav-open .site-header {
     transform: none;
     margin-top: 0.75rem;
     min-height: 0;
+  }
+
+  .protocol-card.is-flipped .protocol-face-front,
+  .protocol-card.is-flipped .protocol-face-front img {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
