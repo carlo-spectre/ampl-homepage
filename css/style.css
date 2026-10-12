@@ -219,27 +219,55 @@ button {
 
 .nav-toggle {
   display: none;
-  width: 2.5rem;
-  height: 2.5rem;
   position: relative;
-  z-index: 60;
+  z-index: 110;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
 }
 
 .nav-toggle span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
-  width: 1.25rem;
-  height: 1.5px;
-  margin: 0.28rem auto;
+  width: 1.35rem;
+  height: 2px;
+  margin: 0;
   background: var(--fg);
-  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform: translate(-50%, -50%);
+  transition: transform 0.25s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.nav-toggle span:first-child {
+  transform: translate(-50%, calc(-50% - 5px));
+}
+
+.nav-toggle span:last-child {
+  transform: translate(-50%, calc(-50% + 5px));
+}
+
+.nav-toggle[aria-expanded="true"] {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav-toggle[aria-expanded="true"] span:first-child {
-  transform: translateY(5px) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .nav-toggle[aria-expanded="true"] span:last-child {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-close {
+  display: none;
+}
+
+body.nav-open .site-header {
+  z-index: 100;
 }
 
 .site-nav {
@@ -668,9 +696,19 @@ button {
   max-width: 44rem;
 }
 
+.product-hero .page-hero-inner {
+  max-width: min(56rem, 100%);
+}
+
 .page-title {
   font-size: clamp(2.4rem, 6vw, 4.4rem);
   margin: 0.4rem 0 1rem;
+}
+
+.product-hero .page-title {
+  max-width: none;
+  text-wrap: balance;
+  white-space: normal;
 }
 
 .section {
@@ -1444,6 +1482,30 @@ button {
 .cta {
   text-align: center;
   border-top: 1px solid var(--line);
+  margin-top: 1.5rem;
+  padding-top: 7rem;
+  padding-bottom: 6rem;
+}
+
+.cta-inner {
+  max-width: min(52rem, 100%);
+  text-align: center;
+}
+
+.cta .section-title {
+  text-wrap: balance;
+  max-width: none;
+}
+
+.cta .section-body {
+  max-width: 40rem;
+  margin-inline: auto;
+  text-wrap: pretty;
+}
+
+.cta .hero-actions {
+  margin-top: 2rem;
+  gap: 0.85rem 1rem;
 }
 
 .stack-band {
@@ -1854,13 +1916,58 @@ a.brand-card {
   justify-content: center;
 }
 
+.footer-nav,
+.footer-social {
+  width: min(100%, 42rem);
+  gap: 0.85rem 1.75rem;
+}
+
+.footer-copy {
+  max-width: 36rem;
+  text-wrap: pretty;
+}
+
+.variants .section-head {
+  max-width: 42rem;
+  margin-inline: auto;
+  margin-bottom: 2.75rem;
+  text-align: center;
+}
+
 .variant-row {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 2.5rem;
   align-items: center;
-  padding: 2.5rem 0;
+  padding: 2.75rem 0;
   border-top: 1px solid var(--line);
+  opacity: 0;
+  transform: translateY(2rem);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.variants .section-head + .variant-row {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.variant-row.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.variant-row.is-visible:nth-of-type(1) {
+  transition-delay: 0.05s;
+}
+
+.variant-row.is-visible:nth-of-type(2) {
+  transition-delay: 0.12s;
+}
+
+.variant-row.is-visible:nth-of-type(3) {
+  transition-delay: 0.2s;
 }
 
 .variant-row.reverse {
@@ -1931,9 +2038,45 @@ a.brand-card {
 #flash .feature-list li::before { background: var(--flash); }
 #pulse .feature-list li::before { background: var(--pulse); }
 
-.how .steps {
-  margin-inline: auto;
-  max-width: 28rem;
+.how-head {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.how-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.15rem;
+  margin-top: 0;
+  max-width: none;
+}
+
+.how-steps li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+  min-height: 100%;
+  padding: 1.35rem 1.3rem 1.45rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.how-steps li::before {
+  grid-row: auto;
+  margin-bottom: 0.15rem;
+  font-size: 1.25rem;
+}
+
+.how-steps strong {
+  font-size: 1.15rem;
+}
+
+.how-steps span {
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
 .fine-print {
@@ -1941,6 +2084,10 @@ a.brand-card {
   color: rgba(255, 255, 255, 0.42);
   font-size: 0.82rem;
   line-height: 1.5;
+  max-width: 58rem;
+  margin-inline: auto;
+  text-align: center;
+  text-wrap: pretty;
 }
 
 .facts {
@@ -2565,6 +2712,15 @@ a.brand-card {
     grid-template-columns: 1fr;
   }
 
+  .how-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+  }
+
+  .how-steps li {
+    padding: 1.15rem 1rem 1.2rem;
+  }
+
   .protocol-flip,
   .protocol-face {
     min-height: 30rem;
@@ -2601,14 +2757,53 @@ a.brand-card {
 }
 
 @media (max-width: 760px) {
+  .how-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero .page-title {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+
+  .cta {
+    padding-top: 5rem;
+    padding-bottom: 4.5rem;
+  }
+
   .nav-toggle {
     display: block;
+  }
+
+  .nav-close {
+    position: absolute;
+    top: calc(var(--header-h) + 0.35rem);
+    right: 1.25rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.5rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--fg);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .nav-close-x {
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 400;
   }
 
   .site-nav {
     position: fixed;
     inset: 0;
-    z-index: 55;
+    z-index: 90;
     width: 100vw;
     height: 100dvh;
     height: 100svh;
@@ -2617,7 +2812,7 @@ a.brand-card {
     align-items: stretch;
     justify-content: center;
     gap: 0.5rem;
-    padding: calc(var(--header-h) + 1.5rem) 1.75rem 2.5rem;
+    padding: calc(var(--header-h) + 2.75rem) 1.75rem 2.5rem;
     overflow-y: auto;
     background: var(--bg);
     opacity: 0;
@@ -2639,7 +2834,7 @@ a.brand-card {
   }
 
   .nav-logo {
-    z-index: 60;
+    z-index: 110;
   }
 
   body.nav-open::after {
@@ -2784,5 +2979,10 @@ a.brand-card {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .variant-row {
+    opacity: 1;
+    transform: none;
   }
 }

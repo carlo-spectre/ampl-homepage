@@ -9,17 +9,25 @@
   });
 
   if (toggle && nav) {
+    const closeBtn = nav.querySelector(".nav-close");
+
     const setOpen = (open) => {
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
       toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       nav.classList.toggle("is-open", open);
       document.body.classList.toggle("nav-open", open);
+      if (closeBtn) closeBtn.hidden = !open;
+      document.documentElement.style.overflow = open ? "hidden" : "";
     };
 
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") !== "true";
       setOpen(open);
     });
+
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => setOpen(false));
+    }
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => setOpen(false));
@@ -152,6 +160,28 @@
       status.className = "form-status is-success";
       status.textContent = "You’re on the list.";
     });
+  }
+
+  const revealRows = document.querySelectorAll(".variant-row");
+  if (revealRows.length) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      revealRows.forEach((row) => row.classList.add("is-visible"));
+    } else if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.22, rootMargin: "0px 0px -8% 0px" }
+      );
+      revealRows.forEach((row) => io.observe(row));
+    } else {
+      revealRows.forEach((row) => row.classList.add("is-visible"));
+    }
   }
 
   const protocolCards = document.querySelectorAll(".protocol-card");

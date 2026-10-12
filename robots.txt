@@ -1,4 +1,12 @@
+# AMPL — https://stayampl.com
 User-agent: *
+Allow: /
+
+# Explicitly allow major crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://stayampl.com/sitemap.xml
